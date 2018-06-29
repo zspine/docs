@@ -1,8 +1,8 @@
 # Data Persisters
 
-To mutate the application states during `POST`, `PUT`, `PATCH` or `DELETE` [operations](operations.md), API Platform calls
+To mutate the application states during `POST`, `PUT`, `PATCH` or `DELETE` [operations](operations.md), API Platform uses
 classes called **data persisters**. Data persisters receive an instance of the class marked as an API resource (usually using
-the `@ApiResource` annotation). This instance has been created using data submitted by the client during [the deserialization
+the `@ApiResource` annotation). This instance contains data submitted by the client during [the deserialization
 process](serialization.md).
 
 A data persister using [Doctrine ORM](http://www.doctrine-project.org/projects/orm.html) is included with the library and
