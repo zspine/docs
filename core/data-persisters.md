@@ -9,7 +9,7 @@ A data persister using [Doctrine ORM](http://www.doctrine-project.org/projects/o
 is enabled by default. It is able to persist and delete objects that are also mapped as [Doctrine entities](https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/basic-mapping.html).
 
 However, you may want to store data to other persistence layers (ElasticSearch or MongoDB), to separate the public model
-of the API and the internal model mapped with the database; or to use patterns such as [CQRS](https://martinfowler.com/bliki/CQRS.html)
+of the API and the internal model mapped with the database, or to use patterns such as [CQRS](https://martinfowler.com/bliki/CQRS.html)
 to use a separate model for [read operations](data-providers.md) and for updates.
 
 Custom data persisters can be used to do so. A project can include as many data persisters as it needs. The first able to
@@ -55,8 +55,7 @@ final class BlogPostDataPersister implements DataPersisterInterface
 If service autowiring and autoconfiguration are enabled (it's the case by default), you are done!
 
 Otherwise, if you use a custom dependency injection configuration, you need to register the corresponding service and add the
-`api_platform.data_persister` tag to it. As for collection data providers, the `priority` attribute can be used to order
-providers.
+`api_platform.data_persister` tag to it.  The `priority` attribute can be used to order persisters.
 
 ```yaml
 # api/config/services.yaml
