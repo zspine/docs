@@ -24,7 +24,7 @@ This interface defines only 3 methods:
 * `delete`: to delete the given data
 * `support`: to tell if the given data can be handled by this specific data persister
 
-Here is an example implementation:
+Here is an implementation example:
 
 ```php
 namespace App\DataPersister;
