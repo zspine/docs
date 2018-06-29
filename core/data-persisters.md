@@ -22,7 +22,7 @@ This interface defines only 3 methods:
 
 * `persist`: to create or update the given data
 * `delete`: to delete the given data
-* `support`: to tell if the given data xcan be handled by this specific data persister
+* `support`: to tell if the given data can be handled by this specific data persister
 
 Here is an example implementation:
 
