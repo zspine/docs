@@ -40,7 +40,7 @@ x-cache:
 
 services:
   traefik:
-    image: traefik
+    image: traefik:v1.7
     command: --api --docker
     ports:
       - "80:80" #All HTTP access will be caught by Traefik
@@ -192,7 +192,7 @@ version: '3.4'
 
 services:
   traefik:
-    image: traefik
+    image: traefik:v1.7
     command: --api --docker
     ports:
       - "80:80"
@@ -234,7 +234,7 @@ x-cache:
 services:
 # Uncomment these lines only if you want to run one api-platform instance using traefik
 -  traefik:
--    image: traefik:latest
+-    image: traefik:v1.7
 -    command: --api --docker
 -    ports:
 -      - "80:80"
